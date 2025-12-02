@@ -33,11 +33,11 @@ The specific requirements for this implementation were:
 ## 📸 Screenshots
 
 ### Desktop Version
-<img src="01_headphones_desktop@2x.png" width="300" alt="desktop Screenshot">
+<img src="./screenshot version/01_headphones_desktop@2x.png" width="300" alt="desktop Screenshot">
 *Layout constrained to 1000px width.*
 
 ### Mobile Version
-<img src="01_headphones_mobile@2x.png" width="300" alt="Mobile Screenshot">
+<img src="./screenshot version/01_headphones_mobile@2x.png" width="300" alt="Mobile Screenshot">
 *Responsive view at < 480px.*
 
 ## 🔗 Links
