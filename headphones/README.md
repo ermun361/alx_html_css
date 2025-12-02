@@ -37,7 +37,7 @@ The specific requirements for this implementation were:
 *Layout constrained to 1000px width.*
 
 ### Mobile Version
-<img src="./screenshot version/01_headphones_mobile@2x.png" width="300" alt="Mobile Screenshot">
+<img src="./screenshot version/01_headphones_mobile@2x.png" width="300" height="200" alt="Mobile Screenshot">
 *Responsive view at < 480px.*
 
 ## 🔗 Links
