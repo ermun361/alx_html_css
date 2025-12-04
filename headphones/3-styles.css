@@ -1,0 +1,394 @@
+/* =========================================
+   1. GLOBAL RESET & BASICS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    background-color: #ffffff; /* Default page bg is white */
+}
+
+/* Reusable container to center content within sections */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* =========================================
+   2. HEADER SECTION (Hero + Nav)
+   ========================================= */
+.header-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Covers full screen height */
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    color: #ffffff;
+    
+    /* Background Image + Dark Blue Gradient Overlay */
+    background: 
+        linear-gradient(to bottom, rgba(50, 65, 85, 0.7) 0%, rgba(10, 15, 30, 0.95) 90%),
+        url('./images/headphones_hero_1.jpg') center center / cover no-repeat;
+}
+
+/* --- Navigation --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px; /* Space before hero text */
+    margin-top: 30px;    /* Safe area from top */
+}
+
+.logo img {
+    height: 25px;
+    width: auto;
+}
+
+/* Mobile Hamburger Menu */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 25px;
+    cursor: pointer;
+}
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Mobile Spacer (balances logo center) */
+.mobile-spacer { width: 25px; }
+
+/* Links hidden on mobile */
+.nav-links { display: none; }
+
+/* --- Hero Content --- */
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.hero-text-bottom p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 50px;
+}
+
+/* --- Button Style --- */
+.btn-primary {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    transition: transform 0.2s;
+}
+.btn-primary:active { transform: scale(0.95); }
+
+
+/* =========================================
+   3. "WHAT WE DO" SECTION
+   (White Background)
+   ========================================= */
+.what-we-do-section {
+    width: 100%;
+    background-color: #ffffff; /* Forces white bg */
+    color: #071629; /* Dark text */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.section-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/* Grid System */
+.services-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 50px;
+    align-items: center;
+}
+
+/* Items */
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    max-width: 220px;
+}
+
+/* Icon Styling */
+.service-item span[class^="holberton_school-icon-"] {
+    font-size: 90px;
+    color: #FF6B6B;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   4. DESKTOP STYLES (Min-Width: 768px)
+   ========================================= */
+@media (min-width: 768px) {
+    
+    /* Header Adjustments */
+    .header-section {
+        padding: 40px 50px;
+    }
+    .menu-toggle, .mobile-spacer {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    .hero-title { font-size: 3rem; }
+
+    /* "What We Do" Adjustments */
+    .services-grid {
+        flex-direction: row; /* Horizontal row */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .service-item { flex: 1; }
+}
+
+/* ============================
+   Our Results Section
+   ============================ */
+
+.results-section {
+    /* Background with dark overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.results-text {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.results-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.results-text p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Grid Layout for the Pentagons */
+.results-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.result-item {
+    flex: 1; /* Distribute space evenly */
+    display: flex;
+    justify-content: center;
+    min-width: 150px;
+}
+
+/* The Pentagon Shape */
+.pentagon {
+    width: 150px;
+    height: 150px;
+    background-color: #FF6565; /* The coral color from the design */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* This creates the 5-sided shape */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.pentagon h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.pentagon p {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* ============================
+   Responsive Design (Mobile)
+   ============================ */
+
+@media (max-width: 768px) {
+    .results-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-item {
+        margin-bottom: 20px;
+    }
+    
+    .results-text {
+        padding: 0 20px;
+    }
+}
+/* ============================
+   Contact Section
+   ============================ */
+
+.contact-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: #071629;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between inputs */
+}
+
+/* Style for Inputs (Line only) */
+.contact-form input {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc; /* Adds the line above the input */
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #071629;
+    outline: none;
+    background: transparent;
+}
+
+/* Add a bottom line for the last input specifically if desired, 
+   or rely on the gap. The screenshot shows lines between items. */
+.contact-form .form-group:last-of-type input {
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-form input::placeholder {
+    color: #071629;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+/* Call to Action Button */
+.btn-submit {
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px; /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 101, 101, 0.3);
+    transition: transform 0.2s, opacity 0.2s;
+    text-transform: uppercase;
+    margin-top: 20px;
+    align-self: center; /* Centers the button in the flex container */
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* ============================
+   Responsive (Mobile)
+   ============================ */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
